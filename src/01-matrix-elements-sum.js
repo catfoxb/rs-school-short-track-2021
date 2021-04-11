@@ -15,6 +15,10 @@
  * The result should be 9
  */
 function getMatrixElementsSum(matrix) {
+  if (!Array.isArray(matrix)) {
+    return null;
+  }
+
   let result = matrix[0].reduce((accum, currentValue) => accum + currentValue);
 
   for (let i = matrix.length - 1; i >= 0; i--) {
